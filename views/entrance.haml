@@ -1,0 +1,16 @@
+!!! XHTML
+- @wikiname = @@conf['default_wiki']
+%html
+  %head
+    %title= @title
+    :javascript
+      var app_root = "#{app_root}";
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/entrance.js"}
+  %body
+    %div#content
+      %h1= @title
+      %div
+        wiki name :
+        %input{:type => :text, :id => 'wiki_name', :value => @wikiname}
+        %input{:type => :button, :id => 'btn_go', :value => "Go"}

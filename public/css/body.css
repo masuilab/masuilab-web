@@ -1,0 +1,78 @@
+body{
+	background-image:url('/images/lab2.png');
+	background-repeat:repeat-x;
+	margin:0px auto;
+	padding:0px;
+	border:0px;
+	width:800px;
+	font:80% Helvetica, Verdana, Arial;
+	position:relative;
+}
+#subtitle{
+	font-size:12px;
+	font-family:sans-serif;
+}
+#content{
+	width:800px;
+	height:100%;
+	margin:0px auto;
+	position:relative;
+}
+#head{
+	background-image:url('/images/head.png');
+	background-repeat:no-repeat;
+	width:800px;
+	height:100px;
+}
+
+#tab{
+	width:580px;
+	float:left;
+	margin-left:5px;
+}
+#left{
+	height:100px;
+	width:600px;
+	float:left;
+}
+#right{
+	height:100%;
+	width:200px;
+	margin-left:600px;
+	margin-top:10px;
+	color:white;	
+}
+#right a{
+	color:#fff;
+}
+/*#left h2{
+	border:2px solid #18394A;
+	padding:5px;
+}*/
+.css-panes img{
+	float:left;
+	margin-left:1em;
+	width:150px;
+	height:150px;
+}
+#topics{
+	/*background-image:url('/images/topics.png');
+	background-repeat:no-repeat;*/
+	height:150px;
+	width:100%;
+}
+#access{
+	/*background-image:url('/images/access.png');
+	background-repeat:no-repeat;*/
+	height:150px;
+	width:100%;
+}
+#link{
+	/*background-image:url('/images/link.png');
+	background-repeat:no-repeat;*/
+	height:150px;
+	width:100%;
+}
+
+
+	

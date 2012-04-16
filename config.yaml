@@ -1,0 +1,8 @@
+title : 'GyazzWeb'
+gyazz : 'http://gyazz.com'
+default_wiki : 'masuilab'
+menu : 'menu'
+image : '(png|PNG|jpg|JPG|jpeg|JPEG|gif|GIF)'
+audio : '(mp3|ogg|aiff|wev|wma)'
+movie : '(mp4|ogv|webm|mov)'
+youtube : 'http://www.youtube.com'

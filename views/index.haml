@@ -1,0 +1,48 @@
+!!! XHTML
+%html
+  %head
+    %title= @title
+    %meta{'http-equiv' => 'content', :content => 'text/html; charset=urf-8'}
+    :javascript
+      var app_root = "#{app_root}";
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    %script{:type => 'text/javascript', :src => "http://cdn.jquerytools.org/1.2.6/jquery.tools.min.js"}
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/tabs.css", :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/body.css", :type => 'text/css'}
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/accordion.css", :type => 'text/css'}
+    -# %link{:rel => 'stylesheet', :type => 'text/css', :href=>'/body.css'}
+  %body
+    %div#head 
+    %div#subtitle= @subtitle
+    %div#content
+      %div#left      
+        %div#tab
+          %div#tabs
+            %ul#menu{:class => "css-tabs skin2"}
+              - @menuArray.each do |menu|
+                %li
+                  %a{:href => "#"} #{menu}
+    
+          %div{:class => "css-panes skin2"}
+            - @menuArray.each do |menu|
+              %div
+                - getContentFromGyazz(@wiki,menu).each do |line|
+                  #{line}
+      %div#right
+        %div#accordion
+          %img{:src => "#{app_root}/images/topics.png"}
+          %div.pane
+            - getContentFromGyazz(@wiki,'topics').each do |line|
+              #{line}
+          %img{:src => "#{app_root}/images/access.png"}
+          %div.pane
+            - getContentFromGyazz(@wiki,'access').each do |line|
+              #{line}
+          %img{:src => "#{app_root}/images/link.png"}
+          %div.pane
+            - getContentFromGyazz(@wiki,'link').each do |line|
+              #{line}
+      %div
+        :javascript
+          $("ul.skin2").tabs("div.skin2 > div");
+          $("#accordion").tabs("#accordion div.pane",{tabs:'img',effect:'slide'});
